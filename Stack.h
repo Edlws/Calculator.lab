@@ -2,16 +2,20 @@
 
 class Stack {
 private:
-    int* array;
+    float* array;
     int size;
-    int top;
+
 
 public:
+    int top;
+
     Stack(int n);
 
-    Stack& operator<<(int value);
+    Stack();
 
-    void operator>>(int& value);
+    Stack& operator<<(float value);
+
+    float operator>>(float& value);
 
     Stack& operator=(const Stack& other);
 
@@ -19,5 +23,7 @@ public:
 
     bool operator==(const Stack& other);
 
-    int operator[](int index);
+    float operator[](int index);
+
+    void pop();
 };
